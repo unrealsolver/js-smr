@@ -1,0 +1,38 @@
+{
+  "name": "js-smr",
+  "version": "0.1.0",
+  "description": "Tool for JS reverse engineering and restoring minified code using source maps",
+  "main": "main.mjs",
+  "bin": "main.mjs",
+  "scripts": {
+    "test": "ava"
+  },
+  "engines": {
+    "node": ">=13.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unrealsolver/js-smr.git"
+  },
+  "keywords": [
+    "unminification",
+    "reverse-engineering",
+    "tool",
+    "deobuscation",
+    "source-map"
+  ],
+  "author": "Ruslan Panasiuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unrealsolver/js-smr/issues"
+  },
+  "homepage": "https://github.com/unrealsolver/js-smr#readme",
+  "dependencies": {
+    "argparse": "^2.0.1",
+    "chalk": "^5.0.1",
+    "source-map": "^0.7.3"
+  },
+  "devDependencies": {
+    "ava": "^4.2.0"
+  }
+}
