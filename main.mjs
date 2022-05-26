@@ -13,6 +13,16 @@ parser.add_argument("map_file", {
   nargs: "?",
   help: "Override path to .map file",
 });
+parser.add_argument("-vb", "--verbose", {
+  default: 0,
+  type: Number,
+  choices: [0, 1, 2],
+  help: "Verbosity level",
+});
+parser.add_argument("-o", "--out", {
+  required: true,
+  help: "Path to minified .js file",
+});
 
 const args = parser.parse_args();
 if (args.map_file === undefined) {
@@ -26,6 +36,6 @@ if (args.map_file === undefined) {
 const content = fs.readFileSync(args.min_file, "utf-8");
 const mapContent = fs.readFileSync(args.map_file, "utf-8");
 
-const restored = await restore(content, mapContent);
+const restored = await restore(content, mapContent, args);
 
-process.stdout.write(restored);
+fs.writeFileSync(args.out, restored, "utf-8");

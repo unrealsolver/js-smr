@@ -1,6 +1,6 @@
 {
   "name": "js-smr",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Tool for JS reverse engineering and restoring minified code using source maps",
   "main": "main.mjs",
   "bin": "main.mjs",
